@@ -1,0 +1,38 @@
+.image-with-bookingButton {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-container {
+  z-index: 0;
+  min-height: 90vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.book-now-button {
+  width: 12rem;
+  height: 5rem;
+  border-radius: 20px;
+  font-size: xx-large;
+  background-color: hsl(184, 43%, 39%);
+  border: none;
+}
+
+.book-now-button:hover {
+  background-color: #856b4c;
+}
+
+.home-title {
+  font-size: 5rem;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding-top: 5rem;
+  margin: 0 auto;
+  text-shadow: 1px 1px 1px rgba(1, 0, 0, 1); 
+  width: 80%;
+}

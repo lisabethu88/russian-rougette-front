@@ -1,0 +1,49 @@
+.RR-logo-text {
+  font-size: 2em;
+}
+
+.about-signup{
+  font-weight: bold;
+}
+
+.Nav {
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.navbar-container {
+  margin: 0;
+  font-weight: bold;
+}
+
+.navbar-container > .container {
+  width: 100%;
+  font-weight: bold;
+}
+
+.rr-logo {
+  width: 20vw;
+}
+
+.header-links{
+    min-width:fit-content;
+    
+}
+
+.signed-in{
+  margin-right: 1rem;
+}
+
+.nav-button {
+  border: none;
+  border-radius: 15px;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  background-color: rgba(255, 96, 152, 0.648);
+}
+
+.RR-logo-link {
+  margin:0 auto;
+}
