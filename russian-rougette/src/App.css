@@ -1,11 +1,11 @@
 .App {
   text-align: center;
 }
-
+/* 
 section h1, section p {
   text-align: center;
   margin: 0 auto;
-}
+} */
 
 @keyframes App-logo-spin {
   from {

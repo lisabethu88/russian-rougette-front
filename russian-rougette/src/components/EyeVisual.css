@@ -1,20 +1,39 @@
-.eye-visual-box{
+#eye-visual-box{
     width:500px;
     height: 500px;
-    background-color: tan;
     border-radius: 45px;
+    position: relative;
+    border: 1px solid black;
+    background-color: #fff;
 }
 
-.eyebrow {
-    width: 100%;
-    height: 25%;
-    background-color: blue;
-    -webkit-mask-image: url("../images/eyebrow.svg");
+.svg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
-.eyeline {
-    width: 100%;
-    height: 35%;
-    background-color: beige;
-    -webkit-mask-image: url("../images/eyeline.svg");
+.svg-image:nth-child(2) {
+    z-index: 2; /* Set a higher z-index for the second image */
+  }
+
+#color-selectors {
+   margin: 10px;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#color-selectors > input{
+    margin: 10px;
+}
+
+.hover-text {
+    font: italic 1.5em sans-serif;
+    fill:transparent;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.eyebrow:hover .hover-text{
+    fill:black;
 }

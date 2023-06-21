@@ -2,3 +2,9 @@
     padding: 50px;
     
 }
+
+p, button{
+    text-align: left;
+    margin-top: 25px;
+    margin-bottom:0;
+}
