@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@600&display=swap');
+
+.roulette-container{
+    min-height: 90vh;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    top: 25%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    min-width: 1500px;
+}
+
+.back-home{
+    transform: scale(1.5);
+    top: 15%;
+    left: 45%;
+    right: 45%;
+    position: absolute;
+    min-width: 100px;
+  }
+
+  .select-roulette {
+    width: 550px;
+    height: 600px;
+    position: relative;
+    margin: 10px;
+  }
+
+  text {
+    font-family: "Urbanist";
+    font-size: 2em;
+    position: absolute;
+    bottom:40%;
+    width: 100%;
+    text-align: center;
+  }
+
+  #left-arrow{
+    position: absolute;
+    bottom:35%;
+    right: 50%;
+    transform: scale(.25);
+  }
+
+  #right-arrow{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: rotateX(180deg) scale(.25);
+  }

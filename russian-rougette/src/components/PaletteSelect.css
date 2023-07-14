@@ -1,0 +1,41 @@
+.palette-select-box {
+    width: 550px;
+    overflow-y: auto; 
+    height: 550px;
+    border-radius: 45px;
+    padding: 25px;
+    position: relative;
+    margin: 0 20px 0 20px;
+}
+
+.name-td{
+    width: 150px;
+}
+
+.brand-td{
+    width: 150px;
+}
+
+.palette-th {
+    width: 150px;
+}
+
+.palette-label {
+    width: 550px;
+}
+
+.sort-filter-btns .dropdown button  {
+    margin: 0 10px 0 10px;
+}
+
+.sort-filter-btns {
+    margin-bottom: 20px;
+}
+
+#palette-table{
+    width: 500px;
+}
+
+#palette-select-table {
+    margin: 25px;
+}

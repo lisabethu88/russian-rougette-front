@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
-              "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+
+const Browbone = ({ className, showText, strokeWidth, filter, fill, stroke, transform, viewBox}) => {
+    return (
 
 <svg xmlns="http://www.w3.org/2000/svg"
-width="1250px" height="790px" stroke="black"
-      preserveAspectRatio="xMidYMid meet"
-     viewBox="-65 15 1500 840">
-    <text fill="#000000" stroke="none" font-weight="bold" 
-    font-size="16" x="45" y="180">Browbone</text>
-  <path id="Selection" 
+    width="100%" height="100%" stroke={stroke} fill={fill} stroke-width={strokeWidth} filter={filter}
+    preserveAspectRatio="xMidYMid meet" viewBox={viewBox} class={className}> 
+    {showText && <text fill="#000000" stroke="none" font-weight="bold" 
+    font-size="16" x="100" y="270" transform='scale(1.9)'>Browbone</text>}
+  <path transform={transform}
+  id="Selection" 
         d="M 492.00,123.00
            C 485.71,123.83 485.63,124.07 479.00,124.00
              479.00,124.00 435.00,116.17 435.00,116.17
@@ -54,3 +54,7 @@ width="1250px" height="790px" stroke="black"
              475.90,106.48 489.08,110.05 491.40,116.04
              492.12,117.89 491.99,120.98 492.00,123.00 Z" />
 </svg>
+
+    )};
+  
+  export default Browbone;

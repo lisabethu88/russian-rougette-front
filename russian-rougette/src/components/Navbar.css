@@ -24,6 +24,7 @@
 
 .rr-logo {
   width: 35vw;
+  min-width: 500px;
 }
 
 .header-links{

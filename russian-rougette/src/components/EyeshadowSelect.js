@@ -1,133 +1,118 @@
-import { Link } from "react-router-dom";
 import { useState, useEffect } from 'react';
-import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
+import { FaCircle } from "react-icons/fa";
 import "./EyeshadowSelect.css";
+import axios from 'axios';
+const kBaseUrl = 'http://localhost:5000'
 
-function EyeshadowSelect() {
-    const [eyeshadows, setEyeshadows] = useState([]);
-    const [selectedEyeshadow, setSelectedEyeshadow] = useState('');
-    const [name, setName] = useState('');
-    const [brand, setBrand] = useState('');
-    const [finish, setFinish] = useState('');
-    const [form, setForm] = useState('');
-    const [color, setColor] = useState('#000000');
+function EyeshadowSelect({  
+  setPalette,
+  palette,
+  selectedEyeshadow, 
+  selectedSection,
+  browboneColor,
+  aboveCreaseColor,
+  creaseColor,
+  deepCreaseColor,
+  outerLidColor,
+  middleLidColor,
+  innerLidColor,
+  innerCornerColor}) {
 
+    const [formData, setFormData] = useState([]);
 
-  
-    // Fetch existing eyeshadows from the server
+  // get all eyeshadows from db
     useEffect(() => {
-      fetch('/eyeshadows')
-        .then(response => response.json())
-        .then(data => setEyeshadows(data))
-        .catch(error => console.error(error));
-    }, []);
-  
-      // Handle form submission
-  const handleSubmit = event => {
-    event.preventDefault();
+      axios
+        .get(`${kBaseUrl}/eyeshadows/${palette.id}`)
+        .then((response) => {
+          setFormData(response.data);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }, [palette]);
+    
 
-    // Create a new eyeshadow object
-    const newEyeshadow = {
-      name,
-      brand,
-      finish,
-      form,
-      color
-    };
-
-    // If an existing eyeshadow is selected, use its ID in the request
-    if (selectedEyeshadow) {
-      newEyeshadow.id = selectedEyeshadow;
-    }
-
-    // Send the eyeshadow data to the server
-    fetch('/eyeshadows', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(newEyeshadow)
-    })
-      .then(response => response.json())
-      .then(data => {
-        console.log(data); // Handle the response data as needed
-        // Reset the form fields
-        setSelectedEyeshadow('');
-        setName('');
-        setBrand('');
-        setFinish('');
-        setForm('');
-        setColor('');
-      })
-      .catch(error => console.error(error));
+  const handleButtonClick = (eyeshadow) => {
+      selectedEyeshadow(eyeshadow);
   };
 
+  const handleGoBackButtonClick = () => {
+    setPalette(null);
+  }
+
+  const getColor = () => {
+    let color="";
+    if (selectedSection === "Browbone") {
+      color = browboneColor;
+    }
+    else if (selectedSection === "Above Crease") {
+      color = aboveCreaseColor;
+    }
+    else if (selectedSection === "Crease") {
+      color = creaseColor;
+    }
+    else if (selectedSection === "Deep Crease") {
+      color = deepCreaseColor;
+    }
+    else if (selectedSection === "Outer Lid") {
+      color = outerLidColor;
+    }
+    else if (selectedSection === "Middle Lid") {
+      color = middleLidColor;
+    }
+    else if (selectedSection === "Inner Lid") {
+      color = innerLidColor;
+    }
+    else if (selectedSection === "Inner Corner") {
+      color = innerCornerColor;
+    }
+    return color;
+  };
+
+  const getButton = (eyeshadow) => {
+    if (selectedSection) {
+      return (<Button disabled={eyeshadow.color === color} 
+      onClick={() => handleButtonClick(eyeshadow)}>Apply</Button>);
+    }
+  }
+  const color = getColor();
+  
   return (
-    <section class="eyeshadow-select-box">
-      <h2>My Collection</h2>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Select an Eyeshadow from the List:
-          <br/>
-          <select value={selectedEyeshadow} onChange={event => setSelectedEyeshadow(event.target.value)}>
-            <option value="">-- Select Eyeshadow --</option>
-            {eyeshadows.map(eyeshadow => (
-              <option key={eyeshadow.id} value={eyeshadow.id}>{eyeshadow.name}</option>
-            ))}
-          </select>
-        </label>
-        <br />
-        <p>Add an Eyeshadow Manually</p>
-        <label>
-          Name: 
-          <br />
-          <input type="text" value={name} onChange={event => setName(event.target.value)} />
-        </label>
-        <br />
-        
-        <label>
-          Brand: 
-          <br />
-          <input type="text" value={brand} onChange={event => setBrand(event.target.value)} />
-        </label>
-        <br />
+    <section>
+      <label class="palette-label header">
+      <h2>{palette.name}</h2>
+      </label>
+    <section class="eyeshadow-select-box box-container">
+      <table>
+      <thead>
+        <tr>
+        <th class="btn-col"><Button class="go-back-btn" onClick={()=>{handleGoBackButtonClick()}}>Go Back</Button></th>
+          <th class="name-td">Shade</th>
+          <th class="color-td">Color</th>
+          <th class="finish-td">Finish</th>
+          <th class="form-td">Form</th> 
+        </tr><hr/>
+      </thead>
 
-        <label>
-          Finish:
-        <br />
-          <select name="finish" id="finish" value={finish} onChange={event => setFinish(event.target.value)}>
-          <option value="matte">Matte</option>
-          <option value="metallic">Metallic</option>
-          <option value="satin">Satin</option>
-          <option value="glitter">Glitter</option>
-          <option value="shimmer">Shimmer</option>
+      <tbody>
+        {formData.map((eyeshadow) => (
+          <tr>
 
-          </select>
-        </label>
-        <br />
+            <td class="btn-col">{getButton(eyeshadow)}</td>
+            <td class="name-td">{eyeshadow.name}</td>
+            <td class="color-td"><FaCircle color={eyeshadow.color} class="icon"/></td>
+            <td class="finish-td">{eyeshadow.finish}</td>
+            <td class="form-td">{eyeshadow.form}</td>
+            
+          </tr>
+        ))}
+      </tbody>
+      </table>
+      </section>
+      </section>
 
-        <label>
-          Form:
-        <br />
-          <select name="form" id="form" value={form} onChange={event => setFinish(event.target.value)}>
-          <option value="powder">Powder</option>
-          <option value="cream">Cream</option>
-          <option value="liquid">Liquid</option>
-          </select>
-        </label>
-        <br />
-        
-        <label>
-          Color:
-        <br />
-          <input type="color" value={color} onChange={event => setColor(event.target.value)} />
-        </label>
-        <br />
-
-        <button type="submit">Add Eyeshadow</button>
-      </form>
-    </section>
   );
 };
 

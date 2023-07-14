@@ -1,0 +1,33 @@
+.look-section {
+    margin: 25px;
+}
+
+.look-container{
+    border-radius: 45px;
+    display:flex;
+    flex-direction: column;
+    width: 200px;
+    align-items: center;
+    height: 550px;
+    padding: 15px;
+    justify-content: center;
+}
+
+.look-section > h2 {
+    padding: 15px;
+    text-align: center;
+}
+
+p{
+    color:black;
+}
+
+h6{
+    height: 20px;
+    font-style: italic;
+}
+
+.look-label{
+    width: 200px;
+    text-align: center;
+}

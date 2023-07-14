@@ -1,8 +1,4 @@
-.image-with-bookingButton {
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-}
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@600&display=swap');
 
 .home-container {
   z-index: 0;
@@ -14,25 +10,21 @@
   justify-content: center;
 }
 
-.book-now-button {
-  width: 12rem;
-  height: 5rem;
-  border-radius: 20px;
-  font-size: xx-large;
-  background-color: hsl(184, 43%, 39%);
-  border: none;
+.home-btns{
+transform: scale(4);
+top: 50%;
+
+position: absolute;
 }
 
-.book-now-button:hover {
-  background-color: #856b4c;
+.free-play-btn {
+left: 30%;
 }
 
-.home-title {
-  font-size: 5rem;
-  color: rgb(255, 255, 255);
-  text-align: center;
-  padding-top: 5rem;
-  margin: 0 auto;
-  text-shadow: 1px 1px 1px rgba(1, 0, 0, 1); 
-  width: 80%;
+.roulette-btn{
+  right: 30%;
+}
+
+.btn {
+  font-family: 'Urbanist';
 }

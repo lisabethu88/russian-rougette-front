@@ -1,0 +1,29 @@
+.select-section {
+    margin: 25px;
+}
+
+.select-section > h2{
+    padding: 15px;
+    text-align: center;
+}
+
+.button-container {
+    border-radius: 45px;
+    display:flex;
+    flex-direction: column;
+    width: 250px;
+    align-items: center;
+    height: 550px;
+    padding: 15px;
+    justify-content: center;
+}
+
+.button-container > .btn {
+    width: 150px;
+    margin: 10px;
+}
+
+.section-label {
+    width: 250px;
+    text-align: center;
+}

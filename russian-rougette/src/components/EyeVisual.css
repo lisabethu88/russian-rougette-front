@@ -1,10 +1,9 @@
 #eye-visual-box{
     width:500px;
-    height: 500px;
+    height: 550px;
     border-radius: 45px;
     position: relative;
-    border: 1px solid black;
-    background-color: #fff;
+    margin: 0 20px 0 20px;
 }
 
 .svg-image {
@@ -13,27 +12,49 @@
     left: 0;
 }
 
-.svg-image:nth-child(2) {
-    z-index: 2; /* Set a higher z-index for the second image */
-  }
+.svg-image#browbone-sparkle {
+    z-index: 2;
+}
+
+.svg-image#above-crease-sparkle {
+    z-index: 3;
+}
+
+.svg-image#crease-sparkle {
+    z-index: 4;
+}
+
+.svg-image#deep-crease-sparkle {
+    z-index: 5;
+}
+
+.svg-image#inner-lid-sparkle {
+    z-index: 6;
+}
+
+.svg-image#middle-lid-sparkle {
+    z-index: 7;
+}
+
+.svg-image#outer-lid-sparkle {
+    z-index: 8;
+}
+
+.svg-image#inner-corner-sparkle {
+    z-index: 9;
+}
+
 
 #color-selectors {
-   margin: 10px;
-   display: grid;
-   grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
-#color-selectors > input{
-    margin: 10px;
-}
-
-.hover-text {
-    font: italic 1.5em sans-serif;
-    fill:transparent;
-    border: 1px solid black;
+#color-selectors section {
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.eyebrow:hover .hover-text{
-    fill:black;
-}

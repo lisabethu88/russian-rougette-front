@@ -1,0 +1,5 @@
+- I am having an issue with useeffect on the homepage. When I select an eyeshadow and then select another section, 
+I cant choose that same eyeshadow initially because the selectedEyeshadow variable has not changed and therefore
+not triggering useEffect. (DONE)
+-Move template to the left
+-make sparkles for middle and outer lid

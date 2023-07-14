@@ -1,10 +1,78 @@
 .eyeshadow-select-box {
-    padding: 50px;
-    
+    width: 550px;
+    overflow-y: auto; 
+    height: 550px;
+    border-radius: 45px;
+    padding: 25px;
+    position: relative;
+    margin: 0 20px 0 20px;
 }
+
 
 p, button{
     text-align: left;
-    margin-top: 25px;
     margin-bottom:0;
+}
+
+
+input, select {
+    border-radius: 10px;
+    border: 1px solid black;
+    height: 40px;
+}
+
+
+input[type="color" i] {
+    border: 1px solid black;
+    padding: 0;
+    overflow: hidden;
+}
+
+.icon {
+    overflow: visible;
+    stroke-width: 10px;
+    font-size: 40px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+
+td, th{ 
+    height: 50px;
+    text-align: center;
+    margin: 0 5px 0 5px;
+}
+
+tr {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#go-back-btn {
+   margin: 0 auto;
+   display: flex;
+}
+
+.name-td {
+    width: 100px;
+}
+.color-td {
+    width: 50px;
+}
+.finish-td {
+    width: 70px;
+}
+.form-td {
+    width: 70px;
+}
+.btn-col {
+    width: 100px;
+}
+.go-back-btn {
+    width: 100px;
+}
+.palette-label {
+    width: 500px;
+    text-align: center;
 }
