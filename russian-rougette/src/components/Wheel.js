@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./Wheel.css";
+/*
+    Credit: https://dev.to/sababg/custom-wheel-of-prize-with-canvas-589h
+*/
 
 const WheelComponent = ({
     segments,
@@ -9,7 +12,7 @@ const WheelComponent = ({
     onRotate,
     onRotatefinish,
     primaryColor,
-    primaryColoraround="#ffbec9",
+    primaryColoraround="#000",
     contrastColor,
     buttonText,
     isOnlyOnce = true,
@@ -45,10 +48,6 @@ const WheelComponent = ({
         }, 0);
     }, [segColors]);
 
-/*     useEffect(() => {
-        wheelInit();
-    },[]) */
-
     const wheelInit = () => {
         initCanvas();
         wheelDraw();
@@ -63,7 +62,6 @@ const WheelComponent = ({
             canvas.setAttribute("id", "canvas");
             document.getElementById("wheel").appendChild(canvas);
         }
-        //canvas.addEventListener("click", spin, false);
         canvasContext = canvas.getContext("2d");
     };
 
@@ -74,7 +72,6 @@ const WheelComponent = ({
             spinStart = new Date().getTime();
             maxSpeed = Math.PI / segments.length;
             frames = 0;
-            //timerHandle = requestAnimationFrame(onTimerTick);
             timerHandle = setInterval(onTimerTick, timerDelay);
         }
 
@@ -122,7 +119,7 @@ const WheelComponent = ({
         while (angleCurrent >= Math.PI * 2) angleCurrent -= Math.PI * 2;
         if (finished) {
             setFinished(true);
-            onFinished(1);
+            onFinished();
             clearInterval(timerHandle);
             timerHandle = 0;
             angleDelta = 0;
@@ -133,13 +130,11 @@ const WheelComponent = ({
     const wheelDraw = () => {
         clear();
         drawWheel();
-        //drawNeedle();
     };
 
     const draw = () => {
         clear();
         drawWheel();
-        //drawNeedle();
     };
 
     const drawSegment = (key, lastAngle, angle) => {
@@ -157,11 +152,12 @@ const WheelComponent = ({
         ctx.save();
         ctx.translate(centerX, centerY);
         ctx.rotate((lastAngle + angle) / 2);
-        ctx.fillStyle = contrastColor || "white";
-        ctx.font = "bold 1.2em " + fontFamily;
-        ctx.fillText(value.substr(0, 21), size / 2 + 20, 0);
         ctx.strokeStyle = 'black';
-        ctx.lineWidth = 5;
+        ctx.lineWidth = 1;
+        ctx.fillStyle = 'white';
+        ctx.font = "bolder 1.5em " + fontFamily;
+        ctx.fillText(value.substr(0, 21), size / 2 + 20, 0);
+        ctx.strokeText(value.substr(0, 21), size / 2 + 20, 0);
         ctx.restore();
     };
 
@@ -185,12 +181,12 @@ const WheelComponent = ({
         ctx.beginPath();
         ctx.arc(centerX, centerY, 40, 0, PI2, false);
         ctx.closePath();
-        ctx.fillStyle = primaryColor || "black";
-        ctx.lineWidth = 5;
-        ctx.strokeStyle = contrastColor || "white";
+        ctx.fillStyle = "white";
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "black";
         ctx.fill();
-        ctx.font = "bold 2em " + fontFamily;
-        ctx.fillStyle = contrastColor || "white";
+        ctx.font = "bold 1.5em " + fontFamily;
+        ctx.fillStyle = "black";
         ctx.textAlign = "center";
         ctx.fillText(buttonText || "Spin", centerX, centerY + 3);
         ctx.stroke();
@@ -199,37 +195,9 @@ const WheelComponent = ({
         ctx.beginPath();
         ctx.arc(centerX, centerY, size, 0, PI2, false);
         ctx.closePath();
-        ctx.lineWidth = 25;
+        ctx.lineWidth = 2;
         ctx.strokeStyle = primaryColoraround || "white";
         ctx.stroke();
-    };
-
-    const drawNeedle = () => {
-        const ctx = canvasContext;
-        ctx.lineWidth = 1;
-        ctx.strokeStyle = contrastColor || "white";
-        ctx.fileStyle = contrastColor || "white";
-        ctx.beginPath();
-        ctx.moveTo(centerX + 10, centerY - 40);
-        ctx.lineTo(centerX - 10, centerY - 40);
-        ctx.lineTo(centerX, centerY - 60);
-        ctx.closePath();
-        ctx.fill();
-        const change = angleCurrent + Math.PI / 2;
-        let i =
-            segments.length -
-            Math.floor((change / (Math.PI * 2)) * segments.length) -
-            1;
-        if (i < 0) i = i + segments.length;
-        ctx.textAlign = "center";
-        ctx.textBaseline = "middle";
-        ctx.fillStyle = "transparent";
-        ctx.font = "bold 1.6em " + fontFamily;
-        currentSegment = segments[i];
-        currentSegColor = segColors[i];
-        isStarted &&
-            ctx.fillText(currentSegment, centerX + 10, centerY + size + 50);
-
     };
 
     const clear = () => {

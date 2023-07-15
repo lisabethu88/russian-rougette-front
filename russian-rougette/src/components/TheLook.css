@@ -9,6 +9,7 @@
     width: 500px;
     align-items: center;
     height: auto;
+    min-height: 550px;
     padding: 15px;
     justify-content: center;
 }

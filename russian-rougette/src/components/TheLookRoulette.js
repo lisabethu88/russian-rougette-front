@@ -15,7 +15,6 @@ const toggleH6 = (shade) =>{
         return (
         <section>
         <h6>Shade: {shade.name}</h6>
-        <h6>Palette/Brand: {shade.palette_name} - {shade.brand}</h6>
         </section>
         )
     }

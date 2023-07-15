@@ -118,64 +118,65 @@ const FreePlay=()=>{
 
 
     return(
-        <main>
+        <main className="home-free-play-container">
+        <section >
+        {/*Go back button*/}
+            <Link to={linkTo}>
+            <Button onClick={handleShowModal} variant="primary back-home">
+                Back
+            </Button>
+            </Link>
+
+            <Modal show={showModal} onHide={handleCloseModal}>
+            <Modal.Header closeButton>
+            <Modal.Title>Warning</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+            <p>Your information will not be saved. Are you sure you want to continue?</p>
+            </Modal.Body>
+            <Modal.Footer>
+            <Button variant="secondary" onClick={handleCloseModal}>
+                Cancel
+            </Button>
+            <Link to='/'>
+            <Button variant="danger" onClick={handleContinueWithoutSaving}>
+                Continue Without Saving
+            </Button>
+            </Link>
+            </Modal.Footer>
+            </Modal>
+        </section>
 
         <section className="free-play-container">
-        <SectionSelect
-          selectedSection={handleSelectedSection}
-        />
-    
-          {toggleComponents()}
-    
-        <EyeVisual 
-          selectedSection={selectedSection}
-          browboneEyeshadow={browbone_shade}
-          aboveCreaseEyeshadow={above_crease_shade}
-          creaseEyeshadow={crease_shade}
-          deepCreaseEyeshadow={deep_crease_shade}
-          outerLidEyeshadow={outer_lid_shade}
-          middleLidEyeshadow={middle_lid_shade}
-          innerLidEyeshadow={inner_lid_shade}
-          innerCornerEyeshadow={inner_corner_shade}
-        />
-       
-        <TheLook
-            browboneShade={browbone_shade}
-            aboveCreaseShade={above_crease_shade}
-            creaseShade={crease_shade}
-            deepCreaseShade={deep_crease_shade}
-            outerLidShade={outer_lid_shade}
-            middleLidShade={middle_lid_shade}
-            innerLidShade={inner_lid_shade}
-            innerCornerShade={inner_corner_shade}
-        />
+            <SectionSelect selectedSection={handleSelectedSection}/>
+        
+            {toggleComponents()}
+        
+            <EyeVisual 
+                selectedSection={selectedSection}
+                browboneEyeshadow={browbone_shade}
+                aboveCreaseEyeshadow={above_crease_shade}
+                creaseEyeshadow={crease_shade}
+                deepCreaseEyeshadow={deep_crease_shade}
+                outerLidEyeshadow={outer_lid_shade}
+                middleLidEyeshadow={middle_lid_shade}
+                innerLidEyeshadow={inner_lid_shade}
+                innerCornerEyeshadow={inner_corner_shade}
+            />
+        
+            <TheLook
+                browboneShade={browbone_shade}
+                aboveCreaseShade={above_crease_shade}
+                creaseShade={crease_shade}
+                deepCreaseShade={deep_crease_shade}
+                outerLidShade={outer_lid_shade}
+                middleLidShade={middle_lid_shade}
+                innerLidShade={inner_lid_shade}
+                innerCornerShade={inner_corner_shade}
+            />
         </section>
         
-        {/*Go back button*/}
-        <Link to={linkTo}>
-        <Button onClick={handleShowModal} variant="primary back-home">
-            Back
-        </Button>
-        </Link>
 
-        <Modal show={showModal} onHide={handleCloseModal}>
-        <Modal.Header closeButton>
-        <Modal.Title>Warning</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-        <p>Your information will not be saved. Are you sure you want to continue?</p>
-        </Modal.Body>
-        <Modal.Footer>
-        <Button variant="secondary" onClick={handleCloseModal}>
-            Cancel
-          </Button>
-          <Link to='/'>
-          <Button variant="danger" onClick={handleContinueWithoutSaving}>
-            Continue Without Saving
-          </Button>
-          </Link>
-        </Modal.Footer>
-      </Modal>
         </main>
     )
 }
