@@ -9,9 +9,24 @@ import Button from 'react-bootstrap/Button';
 import SectionSelect from "../components/SectionSelect";
 import 'react-wheel-of-prizes/dist/index.js';
 import { Link } from "react-router-dom";
+import Modal from 'react-bootstrap/Modal';
 
 const FreePlay=()=>{
+    // modal
+    const [linkTo, setLinkTo] = useState(null);
+    const [showModal, setShowModal] = useState(false);
 
+    const handleShowModal = () => {
+      setShowModal(true);
+    };
+    const handleCloseModal = () => {
+        setShowModal(false);
+        setLinkTo(null);
+      };
+
+      const handleContinueWithoutSaving = () => {
+        setLinkTo('/');
+      };
       // section shades
       const [browbone_shade, setBrowboneShade] = useState({color: 'rgba(0, 0, 0, 0)'}); 
       const [above_crease_shade,  setAboveCreaseShade] = useState({color: 'rgba(0, 0, 0, 0)'});
@@ -33,6 +48,7 @@ const FreePlay=()=>{
       // Eyeshadow choice
       const [selectedEyeshadow, setSelectedEyeshadow] = useState({});
       const handleSelectedEyeshadow = (newEyeshadow) => {
+        newEyeshadow['palette_name'] = selectedPalette.name;
         setSelectedEyeshadow(newEyeshadow);
       }
       
@@ -41,7 +57,9 @@ const FreePlay=()=>{
       const handleSelectedPalette = (newPalette) => {
         setSelectedPalette(newPalette);
       }
-    
+
+
+
       const toggleComponents = () => {
         if (selectedPalette !== null){
           return (
@@ -120,24 +138,44 @@ const FreePlay=()=>{
           innerLidEyeshadow={inner_lid_shade}
           innerCornerEyeshadow={inner_corner_shade}
         />
-    
+       
         <TheLook
-            browboneShade={browbone_shade.name}
-            aboveCreaseShade={above_crease_shade.name}
-            creaseShade={crease_shade.name}
-            deepCreaseShade={deep_crease_shade.name}
-            outerLidShade={outer_lid_shade.name}
-            middleLidShade={middle_lid_shade.name}
-            innerLidShade={inner_lid_shade.name}
-            innerCornerShade={inner_corner_shade.name}
+            browboneShade={browbone_shade}
+            aboveCreaseShade={above_crease_shade}
+            creaseShade={crease_shade}
+            deepCreaseShade={deep_crease_shade}
+            outerLidShade={outer_lid_shade}
+            middleLidShade={middle_lid_shade}
+            innerLidShade={inner_lid_shade}
+            innerCornerShade={inner_corner_shade}
         />
         </section>
         
-        <Link to="/">
-          <Button variant="primary back-home">
-            Back to Home
-          </Button>
+        {/*Go back button*/}
+        <Link to={linkTo}>
+        <Button onClick={handleShowModal} variant="primary back-home">
+            Back
+        </Button>
         </Link>
+
+        <Modal show={showModal} onHide={handleCloseModal}>
+        <Modal.Header closeButton>
+        <Modal.Title>Warning</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+        <p>Your information will not be saved. Are you sure you want to continue?</p>
+        </Modal.Body>
+        <Modal.Footer>
+        <Button variant="secondary" onClick={handleCloseModal}>
+            Cancel
+          </Button>
+          <Link to='/'>
+          <Button variant="danger" onClick={handleContinueWithoutSaving}>
+            Continue Without Saving
+          </Button>
+          </Link>
+        </Modal.Footer>
+      </Modal>
         </main>
     )
 }

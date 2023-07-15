@@ -11,6 +11,7 @@ const Home = () => {
 
   return (
     <main className="home-container">
+      <section class="link">
       <Link to="/freeplay">
           <Button variant="primary home-btns free-play-btn">
             Free Play
@@ -18,10 +19,12 @@ const Home = () => {
         </Link>
         <Link to="/roulette">
           <Button variant="primary home-btns roulette-btn">
-            Roulette
+            Russian Rougette
           </Button>
-        </Link>
+        </Link> 
+      </section>
     </main>
+   
   );
 };
 

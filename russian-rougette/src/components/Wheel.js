@@ -122,37 +122,24 @@ const WheelComponent = ({
         while (angleCurrent >= Math.PI * 2) angleCurrent -= Math.PI * 2;
         if (finished) {
             setFinished(true);
-            onFinished({name: currentSegment, color: currentSegColor});
+            onFinished(1);
             clearInterval(timerHandle);
             timerHandle = 0;
             angleDelta = 0;
         }
-
-/*         angleCurrent += angleDelta;
-        while (angleCurrent >= Math.PI * 2) angleCurrent -= Math.PI * 2;
-      
-        if (finished) {
-          setFinished(true);
-          onFinished({ name: currentSegment, color: currentSegColor });
-          cancelAnimationFrame(timerHandle);
-          timerHandle = 0;
-          angleDelta = 0;
-        } else {
-          timerHandle = requestAnimationFrame(onTimerTick);
-        } */
         
     };
 
     const wheelDraw = () => {
         clear();
         drawWheel();
-        drawNeedle();
+        //drawNeedle();
     };
 
     const draw = () => {
         clear();
         drawWheel();
-        drawNeedle();
+        //drawNeedle();
     };
 
     const drawSegment = (key, lastAngle, angle) => {

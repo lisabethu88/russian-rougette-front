@@ -1,16 +1,15 @@
 import "./TheLook.css"
 
-const TheLook = ({
-    browboneShade,
-    aboveCreaseShade,
-    creaseShade,
-    deepCreaseShade,
-    outerLidShade,
-    middleLidShade,
-    innerLidShade,
-    innerCornerShade}) => {
+const TheLookRoulette = ({eyeshadows}) => {
+    const browboneShade = eyeshadows["Browbone"];
+    const aboveCreaseShade = eyeshadows["Above Crease"];
+    const creaseShade= eyeshadows["Crease"];
+    const deepCreaseShade = eyeshadows["Deep Crease"];
+    const innerCornerShade = eyeshadows["Inner Corner"];
+    const innerLidShade= eyeshadows["Inner Lid"];
+    const outerLidShade = eyeshadows["Outer Lid"];
+    const middleLidShade = eyeshadows["Middle Lid"];
 
-   
 const toggleH6 = (shade) =>{
     if(shade.name){
         return (
@@ -51,4 +50,4 @@ return(
     </section>
 )
 }
-export default TheLook;
+export default TheLookRoulette;

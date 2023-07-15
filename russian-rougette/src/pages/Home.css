@@ -1,20 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@600&display=swap');
 
 .home-container {
-  z-index: 0;
   min-height: 90vh;
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .home-btns{
-transform: scale(4);
-top: 50%;
-
-position: absolute;
+  transform: scale(2);
+  top: 50%;
+  width: 150px;
+  height: 100px;
+  position: absolute;
+  margin: 10px;
 }
 
 .free-play-btn {
@@ -27,4 +29,17 @@ left: 30%;
 
 .btn {
   font-family: 'Urbanist';
+  margin: 10px;
+}
+
+
+.link {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 600px) {
+  .link {
+    flex-direction: column;
+  }
 }

@@ -19,7 +19,7 @@
     left: 45%;
     right: 45%;
     position: absolute;
-    min-width: 100px;
+    width: 100px;
   }
 
   .select-roulette {
@@ -43,11 +43,4 @@
     bottom:35%;
     right: 50%;
     transform: scale(.25);
-  }
-
-  #right-arrow{
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: rotateX(180deg) scale(.25);
   }

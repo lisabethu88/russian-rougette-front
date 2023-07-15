@@ -19,15 +19,16 @@ import InnerLid from "./InnerLid.js";
 import OuterLid from "./OuterLid.js";
 import MiddleLid from "./MiddleLid.js";
 
-function EyeVisual({
-    browboneEyeshadow,
-    aboveCreaseEyeshadow,
-    creaseEyeshadow,
-    deepCreaseEyeshadow,
-    outerLidEyeshadow,
-    middleLidEyeshadow,
-    innerLidEyeshadow,
-    innerCornerEyeshadow}){
+function EyeVisualRoulette({eyeshadows}){
+    const browboneEyeshadow = eyeshadows["Browbone"];
+    const aboveCreaseEyeshadow = eyeshadows["Above Crease"];
+    const creaseEyeshadow = eyeshadows["Crease"];
+    const deepCreaseEyeshadow = eyeshadows["Deep Crease"];
+    const innerCornerEyeshadow = eyeshadows["Inner Corner"];
+    const innerLidEyeshadow = eyeshadows["Inner Lid"];
+    const outerLidEyeshadow = eyeshadows["Outer Lid"];
+    const middleLidEyeshadow = eyeshadows["Middle Lid"];
+
 
     //Skin color
     const [skin_color, setSkinColor] = useState('#c4986e'); 
@@ -54,7 +55,6 @@ function EyeVisual({
     };
 
     const toggleSparkle = (finish, section) => {
-        console.log(finish==="Metallic")
         if (finish==="Metallic"){
             if (section==="browbone") {
                 return <SparkleBrowbone filter='blur(.25px)'/>;
@@ -82,7 +82,6 @@ function EyeVisual({
             }
         }
         else{
-            console.log("hello")
             return;
         }
     }
@@ -188,8 +187,6 @@ function EyeVisual({
         }
     }
 
-    console.log(browboneEyeshadow.finish)
-    console.log(browboneEyeshadow)
     return (
         <section>
             {/* Color selectors for Skin, Eyebrows, and Eyelashes*/}
@@ -220,7 +217,7 @@ function EyeVisual({
                 {toggleSparkle(innerLidEyeshadow.finish, 'inner lid')}
                 {toggleSparkle(middleLidEyeshadow.finish, 'middle lid')}
                 {toggleSparkle(outerLidEyeshadow.finish, 'outer lid')}
-                {toggleSparkle(innerCornerEyeshadow.finish, 'inner corner')}
+                {toggleSparkle(innerCornerEyeshadow.finish, 'inner corner')} 
                
 
 
@@ -304,4 +301,4 @@ function EyeVisual({
     )
 }
 
-export default EyeVisual;
+export default EyeVisualRoulette;
