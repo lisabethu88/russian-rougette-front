@@ -48,3 +48,9 @@
 .RR-logo-link {
   margin:0 auto;
 }
+
+@media (max-width: 600px) {
+  .rr-logo{
+    width: 100vw;
+  }
+}
