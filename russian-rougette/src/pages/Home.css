@@ -58,8 +58,6 @@ body{
   font-size: 3rem;
   color: #e33d75;
   font-weight: bolder;
-	-webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
 }
 
 .welcome-message p {
