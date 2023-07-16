@@ -17,7 +17,7 @@ import Modal from 'react-bootstrap/Modal';
 import hand from "../images/hand-gif-3.gif"
 
 
-const kBaseUrl = 'http://localhost:5000';
+const kBaseUrl = 'https://russian-rougette-ae1e84155bf5.herokuapp.com';
 
 const RandomPlay =()=>{
 
