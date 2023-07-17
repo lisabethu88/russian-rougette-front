@@ -58,7 +58,7 @@
   
   .btn:disabled {
     background-color: #000;
-    border-color: #df0a51;
+    border-color: #000;
     color: #fff;
     opacity: 1;
   }
@@ -72,14 +72,14 @@
   .btn-check:checked+.btn, .btn.active, .btn.show, 
   .btn:first-child:active, :not(.btn-check)+.btn:active{
     color: #fff;
-    border-color: #e33d75 ;
+    border-color: #000 ;
     border-width: 3px;
     background-color: #000;
   }
   
   .btn-primary:focus, .btn-primary:focus-visible{
     color: #fff;
-    border-color: #e33d75 ;
+    border-color: #000 ;
     border-width: 3px;
     background-color: #000;
   }
