@@ -15,9 +15,7 @@ import axios from 'axios';
 import leftarrow from '../images/left-arrow.webp';
 import Modal from 'react-bootstrap/Modal';
 import hand from "../images/hand-gif-3.gif"
-
-
-const kBaseUrl = 'https://russian-rougette-ae1e84155bf5.herokuapp.com';
+import { kBaseUrl } from "../Constants";
 
 const RandomPlay =()=>{
 

@@ -2,8 +2,7 @@ import { useState, useEffect } from 'react';
 import {Button, Dropdown} from "react-bootstrap";
 import "./PaletteSelect.css";
 import axios from 'axios';
-
-const kBaseUrl = 'https://russian-rougette-ae1e84155bf5.herokuapp.com'
+import { kBaseUrl } from '../Constants';
 
 
 const PaletteSelect = ({selectedPalette}) => {

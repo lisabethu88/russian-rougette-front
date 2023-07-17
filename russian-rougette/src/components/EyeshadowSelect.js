@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 import { FaCircle } from "react-icons/fa";
 import "./EyeshadowSelect.css";
 import axios from 'axios';
-const kBaseUrl = 'https://russian-rougette-ae1e84155bf5.herokuapp.com'
+import { kBaseUrl } from '../Constants';
 
 function EyeshadowSelect({  
   setPalette,
