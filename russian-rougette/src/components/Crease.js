@@ -5,7 +5,7 @@ const Crease=({ className, showText, strokeWidth, filter, fill, stroke, transfor
     preserveAspectRatio="xMidYMid meet" 
      viewBox={viewBox} fill={fill} stroke-width={strokeWidth} 
      filter={filter} class={className}> 
-          {showText && <text fill="#000000" stroke="none" font-weight="bold" 
+          {showText && <text fill="#fff" stroke="#000" stroke-width="2px"  font-weight="bold" 
           font-size="27" x="500" y="400" transform='scale(2.8)'>Crease</text>}
 
  <path transform={transform}

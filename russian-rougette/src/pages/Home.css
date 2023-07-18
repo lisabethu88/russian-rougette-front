@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@600;800&display=swap');
 body{
  font-family: 'Urbanist';
 }
@@ -10,10 +10,15 @@ body{
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  /* border: 5px solid pink; */
   margin: 0 auto;
   border-radius: 45px;
   padding: 10px;
+  min-width: 600px;
+}
+
+.back-home{
+  transform: scale(1.5);
+  margin: 70px !important;
 }
 
 .home-btns{
@@ -26,6 +31,7 @@ body{
 .btn {
   font-family: 'Urbanist';
   margin: 10px;
+  box-shadow: -1px 1px  rgb(0, 0, 0);
 }
 
 .link a {
@@ -96,4 +102,21 @@ body{
   height: 200px;
   width: auto;
   margin: 10px;
+}
+
+.instructions {
+  text-align: center;
+  width: 400px;
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: #e33d75;
+  box-shadow: -5px 5px  rgb(0, 0, 0);
+
+}
+
+.instructions p {
+  color: white;
+  font-size: large;
+  
 }

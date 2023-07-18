@@ -6,7 +6,7 @@ const AboveCrease = ({ className, showText, strokeWidth, filter, fill, stroke, t
     preserveAspectRatio="xMidYMid meet" 
      viewBox={viewBox} fill={fill} stroke-width={strokeWidth} 
      filter={filter} class={className}> 
-     {showText && <text fill="#000000" stroke="none" font-weight="bold" font-size="27" 
+     {showText && <text fill="#fff" stroke="#000" stroke-width="2px" font-weight="bold" font-size="27" 
      x="700" y="300" transform="scale(2.8)">Above Crease</text>}
       
   <path 

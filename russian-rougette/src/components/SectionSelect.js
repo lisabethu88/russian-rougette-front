@@ -14,7 +14,7 @@ const SectionSelect = ({selectedSection}) => {
     return(
         <section class="select-section">
             <label class="section-label header">
-            <h2>Select a Section</h2>
+            <h2>Eye Sections</h2>
             </label>
             <section class="button-container box-container">
                 <Button 

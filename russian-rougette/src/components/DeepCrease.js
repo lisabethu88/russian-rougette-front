@@ -6,7 +6,7 @@ const DeepCrease=({ className, showText, strokeWidth, filter, fill, stroke, tran
         preserveAspectRatio="xMidYMid meet" 
          viewBox={viewBox} fill={fill} stroke-width={strokeWidth} 
          filter={filter} class={className}> 
-                {showText && <text fill="#000000" stroke="none" font-weight="bold" 
+                {showText && <text fill="#fff" stroke="#000" stroke-width="2px"  font-weight="bold" 
            font-size="27" x="530" y="470" transform="scale(2.8)">Deep Crease</text>}
   <path id="Selection"
   transform={transform}

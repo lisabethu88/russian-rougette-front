@@ -1,5 +1,6 @@
 import "../App.css";
 import "./FreePlay.css";
+import "./Home.css";
 import TheLook from "../components/TheLook";
 import EyeshadowSelect from "../components/EyeshadowSelect"; 
 import EyeVisual from "../components/EyeVisual";
@@ -7,7 +8,6 @@ import PaletteSelect from "../components/PaletteSelect";
 import { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import SectionSelect from "../components/SectionSelect";
-import 'react-wheel-of-prizes/dist/index.js';
 import { Link } from "react-router-dom";
 import Modal from 'react-bootstrap/Modal';
 
@@ -119,11 +119,11 @@ const FreePlay=()=>{
 
     return(
         <main className="home-free-play-container">
-        <section >
-        {/*Go back button*/}
-            <Link to={linkTo}>
+            <section class="link-section">
+            {/*Go back button*/}
+            <Link  to={linkTo}>
             <Button onClick={handleShowModal} variant="primary back-home">
-                Back
+                Return Home
             </Button>
             </Link>
 
@@ -145,6 +145,12 @@ const FreePlay=()=>{
             </Link>
             </Modal.Footer>
             </Modal>
+        </section>
+
+        <section class="instructions">
+            <p><b>Instructions:</b> First, select an eye section and eyeshadow palette. 
+                Then, select the eyeshadow you want to apply to the selected section. 
+                Adjust skin, eyebrow, and eyelash color to your preference. </p>
         </section>
 
         <section className="free-play-container">

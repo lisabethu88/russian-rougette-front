@@ -10,7 +10,6 @@ const PaletteSelect = ({selectedPalette}) => {
   //sort state
   const [palettesData, setPalettesData] = useState([]);
 
-
   const [selectedButton, setSelectedButton] = useState(null);
 
   const handleSort = (option) => {
@@ -80,7 +79,7 @@ const PaletteSelect = ({selectedPalette}) => {
     return (
         <section id="palette-select-container">
         <label class="palette-label header">
-        <h2>Select a Palette</h2>
+        <h2>Eyeshadow Palettes</h2>
         </label>
         <section class="palette-select-box box-container">
         <table id="palette-table">

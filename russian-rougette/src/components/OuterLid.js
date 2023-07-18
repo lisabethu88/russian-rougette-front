@@ -5,7 +5,7 @@ const OuterLid =({ className, showText, strokeWidth, filter, fill, stroke, trans
         preserveAspectRatio="xMidYMid meet" 
          viewBox={viewBox} fill={fill} stroke-width={strokeWidth} 
          filter={filter} class={className}> 
-         {showText && <text fill="#000000" stroke="none" font-weight="bold"
+         {showText && <text fill="#fff" stroke="#000" stroke-width="2px"  font-weight="bold"
            font-size="27" x="610" y="600" transform='scale(2.8)'>Outer Lid</text>}
   <path id="Selection"
   transform={transform}

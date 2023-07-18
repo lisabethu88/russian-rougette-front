@@ -1,4 +1,3 @@
-import "../App.css";
 import "./Home.css";
 import "../App.css";
 import "./RandomPlay.css";
@@ -12,7 +11,6 @@ import { Link } from "react-router-dom";
 import WheelComponent from '../components/Wheel';
 import 'react-wheel-of-prizes/dist/index.js';
 import axios from 'axios';
-import leftarrow from '../images/left-arrow.webp';
 import Modal from 'react-bootstrap/Modal';
 import hand from "../images/hand-gif-3.gif"
 import { kBaseUrl } from "../Constants";
@@ -169,7 +167,7 @@ const RandomPlay =()=>{
                 {/*Go back button*/}
                 <Link to={linkTo}>
                     <Button onClick={handleShowModal} variant="primary back-home">
-                        Back
+                        Return Home
                     </Button>
                 </Link>
 
@@ -191,6 +189,11 @@ const RandomPlay =()=>{
                     </Link>
                 </Modal.Footer>
                 </Modal>
+            </section>
+
+            <section class="instructions">
+                <p><b>Instructions:</b> First, select an eyeshadow palette. Then, spin the wheel to create a randomized eyeshadow look.  
+                    Adjust skin, eyebrow, and eyelash color to your preference. </p>
             </section>
             <section class="roulette-container">
                 {/*Roulette Components*/}

@@ -5,7 +5,7 @@ const InnerCorner = ({ className, showText, strokeWidth, filter, fill, stroke, t
         preserveAspectRatio="xMidYMid meet" 
          viewBox="300 605 2400 1210"  fill={fill} stroke-width={strokeWidth} 
      filter={filter} class={className}> 
-     {showText &&  <text fill="#000000" stroke="none" font-weight="bold" 
+     {showText &&  <text fill="#fff" stroke="#000" stroke-width="2px"  font-weight="bold" 
            font-size="27" x="120" y="700" transform='scale(2.8)'>Inner Corner</text>}
   <path id="Selection"
            transform='scale(2.4)'

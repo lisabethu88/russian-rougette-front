@@ -5,7 +5,7 @@ const Browbone = ({ className, showText, strokeWidth, filter, fill, stroke, tran
 <svg xmlns="http://www.w3.org/2000/svg"
     width="100%" height="100%" stroke={stroke} fill={fill} stroke-width={strokeWidth} filter={filter}
     preserveAspectRatio="xMidYMid meet" viewBox={viewBox} class={className}> 
-    {showText && <text fill="#000000" stroke="none" font-weight="bold" 
+    {showText && <text fill="#fff" stroke="#000" stroke-width="2px"  font-weight="bold" 
     font-size="16" x="100" y="270" transform='scale(1.9)'>Browbone</text>}
   <path transform={transform}
   id="Selection" 
