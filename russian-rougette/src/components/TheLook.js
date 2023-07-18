@@ -28,7 +28,7 @@ const toggleH6 = (shade) =>{
 return(
     <section class="look-section">
         <label class="look-label header">
-        <h2>The Look</h2>
+            <h2>The Look</h2>
         </label>
         <section class="look-container box-container">
             <h5>Browbone</h5>
