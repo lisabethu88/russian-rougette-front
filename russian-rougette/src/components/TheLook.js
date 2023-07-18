@@ -14,7 +14,7 @@ const TheLook = ({
 const toggleH6 = (shade) =>{
     if(shade.name){
         return (
-        <section>
+        <section class="h6-info">
         <h6>Shade: {shade.name}</h6>
         <h6>Palette/Brand: {shade.palette_name} - {shade.brand}</h6>
         </section>
