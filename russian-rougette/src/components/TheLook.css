@@ -26,7 +26,6 @@ p{
 h6{
     height: 20px;
     font-style: italic;
-    margin-bottom: 10px;
 }
 
 .look-label{
@@ -36,4 +35,8 @@ h6{
 
 hr{
     color:black;
+}
+
+.h6-info{
+    margin-bottom:20px;
 }
