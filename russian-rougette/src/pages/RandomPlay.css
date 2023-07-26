@@ -55,9 +55,3 @@ text {
         display: none;
     }
 }
-
-@media (max-width: 600px) {
-    .home-roulette-container {
-        transform: scale(.85);
-    }
-}

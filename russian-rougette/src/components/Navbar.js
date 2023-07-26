@@ -3,10 +3,8 @@ import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import Button from "react-bootstrap/Button";
 import "./Navbar.css";
-import logo from "../images/rr_logo.png";
-import logo2 from "../images/rr_logo_2.png";
-import logo3 from "../images/rr_logo_3.png";
 import logo4 from "../images/rr_logo_4.png";
+import logo5 from "../images/rr_logo_5.png"
 
 
 
@@ -56,7 +54,7 @@ function Nav() {
         <Container className="navbar-container">
           <Link className="RR-logo-link" to="/">
             <Navbar.Brand href="#home" className="RR-logo-text">
-              <img className="rr-logo" src={logo4} alt="Russian Rougette logo" />
+              <img className="rr-logo" src={logo5} alt="Russian Rougette logo" />
             </Navbar.Brand> 
             </Link>
             <Navbar.Text className="header-links">

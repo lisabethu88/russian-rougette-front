@@ -6,9 +6,9 @@
     border-radius: 45px;
     display:flex;
     flex-direction: column;
-    width: 500px;
+    width: 550px;
     align-items: center;
-    height: auto;
+    height: 550px;
     min-height: 550px;
     padding: 15px;
     justify-content: center;

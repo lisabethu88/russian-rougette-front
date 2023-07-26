@@ -13,7 +13,7 @@ body{
   margin: 0 auto;
   border-radius: 45px;
   padding: 10px;
-  min-width: 600px;
+  /* min-width: 600px; */
 }
 
 .back-home{

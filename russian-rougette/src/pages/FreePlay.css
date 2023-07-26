@@ -93,10 +93,10 @@
     text-decoration: none;
   }
 
-  @media (max-width: 600px) {
-    .home-free-play-container {
-        transform: scale(.85);
-    }
+
+@media (max-width: 500px) {
+  .box-container{
+  width: 450px !important;
+  margin: 0 auto !important;
 }
-
-
+}
