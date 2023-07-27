@@ -10,18 +10,18 @@
 
 .button-container {
     border-radius: 45px;
-    display:grid;
+    display:flex;
     align-items: center;
     height: 550px;
     padding: 15px;
     justify-content: center;
-    grid-template-columns: 1fr 1fr;
+    flex-direction: column;
     width: 100%;
 }
 
 .button-container > .btn {
     width: 150px;
-    margin: 0 auto;
+    margin: 20px 0 20px 0;
 }
 
 .section-label {

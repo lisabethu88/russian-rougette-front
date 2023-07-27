@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="inner-corner-sparkle" xmlns="http://www.w3.org/2000/svg" 
-xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="500px" 
-height="500px" viewBox="0 0 849 677" enable-background="new 0 0 849 677" 
+xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" 
+height="100%" viewBox="0 0 849 677" enable-background="new 0 0 849 677" 
 xml:space="preserve" class="svg-image"> 
- <image id="image0" width="849" height="677" x="-320" y="350" transform='scale(.8)'
+ <image id="image0" width="849" height="677" x="-320" y="300" transform='scale(.8)'
     href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA1EAAAKlCAQAAACA+K6aAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
 AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAQY2FO
 dgAAA1EAAAKl////NQAAAXAh62uMAACAAElEQVR42uT9eZgkRfE/AH9GQY4tRfSLpYhIIx5IIwJq

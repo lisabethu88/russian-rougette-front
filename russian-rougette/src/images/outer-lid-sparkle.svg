@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="outer-lid-sparkle" xmlns="http://www.w3.org/2000/svg" 
-xmlns:xlink="http://www.w3.org/1999/xlink"  x="0px" y="0px" width="500px" height="550px" 
+xmlns:xlink="http://www.w3.org/1999/xlink"  x="0px" y="0px" width="100%" height="100%" 
 stroke="black" preserveAspectRatio="xMidYMid meet" viewBox="0 0 2400 1210" xml:space="preserve" class="svg-image">  
 <image id="image0" width="310" height="400" x="460" y="155" transform="scale(2.4)" 
     href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARsAAAEdCAQAAACWfQu3AAAABGdBTUEAALGPC/xhBQAAACBjSFJN

@@ -87,6 +87,7 @@
     box-shadow: -5px 5px  rgb(0, 0, 0);
     background-color: rgb(255, 190, 201);
     border: 1px solid black;
+    height: 650px!important;
   }
 
   a {
@@ -94,20 +95,42 @@
   }
 
 
-@media (max-width: 500px) {
+@media (max-width: 501px) {
   .box-container{
   width: 100vw !important;
   margin: 0 auto !important;
 }
 
-.instructions, .palette-label, .palette-table,
+.instructions, .palette-label,
  .look-label, .look-container, .section-label,
  .select-section
 {
   width: 100vw !important;
 }
 
-.home-free-play-container{
-  transform: scale(.9);
+tr{
+  width: 90vw !important;
+}
+
+.palette-select-box{
+  overflow-x: hidden;
+}
+
+.icon{
+  font-size: 30px !important;
+  border: none !important;
+}
+
+table {table-layout: fixed;
+  table-layout: fixed; /* This property ensures equal width for each cell */
+  border-collapse: collapse;}
+td {
+  margin: 0;
+}
+
+
+
+th{
+  margin: 0;
 }
 }
