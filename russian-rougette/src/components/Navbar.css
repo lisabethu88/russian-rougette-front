@@ -15,6 +15,7 @@
 .navbar-container {
   margin: 0;
   font-weight: bold;
+  -bs-gutter-x: 0;
 }
 
 .navbar-container > .container {
@@ -23,8 +24,8 @@
 }
 
 .rr-logo {
-  width: 40vw;
-  min-width: 500px;
+  width: 100vw;
+  max-width: 800px;
 }
 
 .header-links{

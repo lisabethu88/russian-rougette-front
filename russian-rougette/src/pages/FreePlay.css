@@ -96,7 +96,18 @@
 
 @media (max-width: 500px) {
   .box-container{
-  width: 450px !important;
+  width: 100vw !important;
   margin: 0 auto !important;
+}
+
+.instructions, .palette-label, .palette-table,
+ .look-label, .look-container, .section-label,
+ .select-section
+{
+  width: 100vw !important;
+}
+
+.home-free-play-container{
+  transform: scale(.9);
 }
 }

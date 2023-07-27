@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import Button from "react-bootstrap/Button";
 import "./Navbar.css";
@@ -50,8 +49,7 @@ function Nav() {
 
   return (
     <header>
-      <Navbar className="Nav">
-        <Container className="navbar-container">
+      <Navbar className="Nav navbar-container">
           <Link className="RR-logo-link" to="/">
             <Navbar.Brand href="#home" className="RR-logo-text">
               <img className="rr-logo" src={logo5} alt="Russian Rougette logo" />
@@ -61,7 +59,6 @@ function Nav() {
             {/* {signedIn()} */}
 
           </Navbar.Text>
-        </Container>
       </Navbar>
     </header>
   );
