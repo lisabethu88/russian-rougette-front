@@ -92,7 +92,6 @@ function EyeshadowSelect({
           <th class="name-td">Shade</th>
           <th class="color-td">Color</th>
           <th class="finish-td">Finish</th>
-          <th class="form-td">Form</th> 
         </tr><hr/>
       </thead>
 
@@ -104,7 +103,6 @@ function EyeshadowSelect({
             <td class="name-td">{eyeshadow.name}</td>
             <td class="color-td"><FaCircle color={eyeshadow.color} class="icon"/></td>
             <td class="finish-td">{eyeshadow.finish}</td>
-            <td class="form-td">{eyeshadow.form}</td>
             
           </tr>
         ))}

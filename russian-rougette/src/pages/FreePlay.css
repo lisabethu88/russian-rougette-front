@@ -125,12 +125,11 @@ table {table-layout: fixed;
   table-layout: fixed; /* This property ensures equal width for each cell */
   border-collapse: collapse;}
 td {
-  margin: 0;
+  margin: 0 !important;
+  height: 75px !important;
 }
 
-
-
 th{
-  margin: 0;
+  margin: 0 !important;
 }
 }
