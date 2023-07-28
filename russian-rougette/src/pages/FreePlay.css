@@ -97,23 +97,31 @@
 
 @media (max-width: 501px) {
   .box-container{
-  width: 100vw !important;
+  width: 90vw !important;
   margin: 0 auto !important;
 }
 
 .instructions, .palette-label,
  .look-label, .look-container, .section-label,
- .select-section
+ .select-section, #color-selectors
 {
-  width: 100vw !important;
+  width: 90vw !important;
+  margin: 25px 0 25px 0 !important;
 }
 
 tr{
-  width: 90vw !important;
+  width: 100%!important;
+}
+
+#canvas {
+  width: 100vw;
 }
 
 .palette-select-box{
   overflow-x: hidden;
+}
+#palette-table{
+  width: 100% !important;
 }
 
 .icon{
@@ -131,5 +139,10 @@ td {
 
 th{
   margin: 0 !important;
+}
+
+.home-free-play-container, .free-play-container,
+ .roulette-container, .home-roulette-container{
+  padding: 0;
 }
 }
