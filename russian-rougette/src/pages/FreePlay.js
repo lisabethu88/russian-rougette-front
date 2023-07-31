@@ -181,8 +181,6 @@ const FreePlay=()=>{
                 innerCornerShade={inner_corner_shade}
             />
         </section>
-        
-
         </main>
     )
 }

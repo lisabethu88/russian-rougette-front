@@ -41,11 +41,11 @@ const WheelComponent = ({
     const centerY = 300;
     
     useEffect(() => {
-        document.getElementById("canvas").onclick = function () { spin() }
-        wheelInit();
+        document.getElementById("canvas").onclick = function () { spin();}
+        wheelInit();/* 
         setTimeout(() => {
             window.scrollTo(0, 1);
-        }, 0);
+        }, 0); */
     }, [segColors]);
 
     const wheelInit = () => {
