@@ -1,42 +1,29 @@
 .look-section {
-    margin: 25px;
+  margin: 25px;
 }
 
-.look-container{
-    border-radius: 45px;
-    display:flex;
-    flex-direction: column;
-    width: 550px;
-    align-items: center;
-    height: 550px;
-    min-height: 550px;
-    padding: 15px;
-    justify-content: center;
+.look-container {
+  border-radius: 45px;
+  display: flex;
+  flex-direction: column;
+  width: 550px;
+  align-items: center;
+  height: 550px;
+  min-height: 550px;
+  padding: 15px;
+  justify-content: center;
 }
 
-.look-section > h2 {
-    padding: 15px;
-    text-align: center;
+.look-label {
+  width: 100%;
+  text-align: center;
 }
 
-p{
-    color:black;
+hr {
+  color: #fa9a8580;
+  opacity: 1;
 }
 
-h6{
-    height: 20px;
-    font-style: italic;
-}
-
-.look-label{
-    width: 550px;
-    text-align: center;
-}
-
-hr{
-    color:black;
-}
-
-.h6-info{
-    margin-bottom:20px;
+.h6-info {
+  margin-bottom: 20px;
 }

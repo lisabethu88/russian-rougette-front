@@ -1,14 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@600;800&display=swap');
-
-#wheel {            
-    position: relative;
-    width: 550px;
-    height:550px;
+#wheel {
+  position: relative;
+  width: 550px;
+  height: 550px;
 }
 
-#canvas{
-    position: absolute;
-    top: 50%;
-    left: 45%;
-    transform: translate(-50%, -50%);
+#canvas {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -50%);
 }

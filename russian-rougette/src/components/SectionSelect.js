@@ -1,89 +1,102 @@
-import { useState, useEffect } from 'react';
-import Button from "react-bootstrap/Button";
+import { useState, useEffect } from "react";
 import "./SectionSelect.css";
+import { Box, Button } from "@mui/material";
+import { buttonStyle } from "../Constants";
 
+const SectionSelect = ({ handleSelectedSection, selectedSection }) => {
+  const [selectedButton, setSelectedButton] = useState(selectedSection);
 
-const SectionSelect = ({selectedSection}) => {
-    const [selectedButton, setSelectedButton] = useState(null);
+  const handleButtonClick = (buttonName) => {
+    setSelectedButton(buttonName);
+    handleSelectedSection(buttonName);
+  };
 
-    const handleButtonClick = (buttonName) => {
-        setSelectedButton(buttonName);
-        selectedSection(buttonName)
-    };
+  return (
+    <Box
+      sx={{
+        width: "100%",
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        gap: 1,
+        paddingTop: "70px",
+      }}
+    >
+      <Button
+        variant="primary"
+        disabled={selectedButton === "Browbone"}
+        onClick={() => handleButtonClick("Browbone")}
+        sx={buttonStyle}
+      >
+        Browbone
+      </Button>
 
-    return(
-        <section class="select-section">
-            <label class="section-label header">
-            <h2>Eye Sections</h2>
-            </label>
-            <section class="button-container box-container">
-                <Button 
-                    variant="primary"
-                    disabled={selectedButton === 'Browbone'}
-                    onClick={() => handleButtonClick('Browbone')}
-                >
-                    Browbone
-                </Button>
+      <Button
+        variant="primary"
+        disabled={selectedButton === "Above Crease"}
+        onClick={() => handleButtonClick("Above Crease")}
+        sx={buttonStyle}
+      >
+        Above Crease
+      </Button>
 
-                <Button
-                    variant="primary"
-                    disabled={selectedButton === 'Above Crease'}
-                    onClick={() => handleButtonClick('Above Crease')}
-                >
-                    Above Crease
-                </Button>
+      <Button
+        variant="primary"
+        disabled={selectedButton === "Crease"}
+        onClick={() => handleButtonClick("Crease")}
+        sx={buttonStyle}
+      >
+        Crease
+      </Button>
 
-                <Button
-                    variant="primary"
-                    disabled={selectedButton === 'Crease'}
-                    onClick={() => handleButtonClick('Crease')}
-                >
-                    Crease
-                </Button>
+      <Button
+        variant="primary"
+        disabled={selectedButton === "Deep Crease"}
+        onClick={() => handleButtonClick("Deep Crease")}
+        sx={buttonStyle}
+      >
+        Deep Crease
+      </Button>
 
-                <Button
-                    variant="primary"
-                    disabled={selectedButton === 'Deep Crease'}
-                    onClick={() => handleButtonClick('Deep Crease')}
-                >
-                    Deep Crease
-                </Button>
+      <Button
+        variant="primary"
+        disabled={selectedButton === "Outer Lid"}
+        onClick={() => handleButtonClick("Outer Lid")}
+        sx={buttonStyle}
+      >
+        Outer Lid
+      </Button>
 
-                <Button
-                    variant="primary"
-                    disabled={selectedButton === 'Outer Lid'}
-                    onClick={() => handleButtonClick('Outer Lid')}
-                >
-                    Outer Lid
-                </Button>
+      <Button
+        variant="primary"
+        disabled={selectedButton === "Middle Lid"}
+        onClick={() => handleButtonClick("Middle Lid")}
+        sx={buttonStyle}
+      >
+        Middle Lid
+      </Button>
 
-                <Button
-                    variant="primary"
-                    disabled={selectedButton === 'Middle Lid'}
-                    onClick={() => handleButtonClick('Middle Lid')}
-                >
-                    Middle Lid
-                </Button>
+      <Button
+        variant="primary"
+        disabled={selectedButton === "Inner Lid"}
+        onClick={() => handleButtonClick("Inner Lid")}
+        sx={buttonStyle}
+      >
+        Inner Lid
+      </Button>
 
-                <Button
-                    variant="primary"
-                    disabled={selectedButton === 'Inner Lid'}
-                    onClick={() => handleButtonClick('Inner Lid')}
-                >
-                    Inner Lid
-                </Button>
-
-                <Button
-                    variant="primary"
-                    disabled={selectedButton === 'Inner Corner'}
-                    onClick={() => handleButtonClick('Inner Corner')}
-                >
-                    Inner Corner
-                </Button>
-            </section>
-        </section>
-    )
-
-}
+      <Button
+        variant="primary"
+        disabled={selectedButton === "Inner Corner"}
+        onClick={() => handleButtonClick("Inner Corner")}
+        sx={buttonStyle}
+      >
+        Inner Corner
+      </Button>
+    </Box>
+  );
+};
 
 export default SectionSelect;

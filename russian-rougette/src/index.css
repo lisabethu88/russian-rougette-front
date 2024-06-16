@@ -1,13 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap");
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Roboto Flex", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #fcfbfb !important;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  color: #544131 !important;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+h2 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 2em;
+  text-align: center;
+  height: 70px;
+  margin: 0 !important;
+  letter-spacing: 1;
+  color: #0a97b1 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+input[type="color" i] {
+  border-radius: 50%;
+  background-color: field;
+  padding: 0;
+  overflow: hidden;
+  width: 30px;
+  height: 30px;
+  border: none !important;
+}
+
+input[type="color" i]:hover {
+  cursor: pointer;
+}
+
+tbody > tr,
+tr > th,
+tr > td,
+thead {
+  border-color: #f9c6bbcd !important;
+  font-family: "Roboto Flex", sans-serif !important;
+  color: #544131 !important;
+}
+
+h5 {
+  font-family: "Robto Flex", sans-serif;
+  font-size: 0.9rem !important;
+  text-align: center;
+  letter-spacing: 1;
+  background-color: #df848739;
+  padding: 10px;
+  margin-bottom: 0 !important;
+  width: 100%;
+  font-weight: bold !important;
+  /* outline: 1px solid #fa9a858f; */
+}
+
+#table-header-hr,
+hr {
+  color: #fa9a8580;
+  opacity: 1;
+}
+/* 
+.box-shadow {
+  -webkit-box-shadow: inset -8px 7px 5px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset -8px 7px 5px -8px rgba(0, 0, 0, 0.75);
+  box-shadow: inset -8px 7px 5px -8px rgba(0, 0, 0, 0.75);
+} */
+
+b {
+  font-family: "Bebas Neue";
+  letter-spacing: 0.05rem;
+  color: #0a97b1;
+  font-size: large;
+}
+
+#table-header-hr {
+  opacity: 0.5;
+  margin-top: 0;
 }

@@ -1,7 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@600;800&display=swap');
-body{
- font-family: 'Urbanist';
-}
 .home-container {
   height: auto;
   width: fit-content;
@@ -16,12 +12,12 @@ body{
   /* min-width: 600px; */
 }
 
-.back-home{
+.back-home {
   transform: scale(1.5);
   margin: 70px !important;
 }
 
-.home-btns{
+.home-btns {
   transform: scale(1.5);
   width: 150px;
   height: 50px;
@@ -29,9 +25,8 @@ body{
 }
 
 .btn {
-  font-family: 'Urbanist';
   margin: 10px;
-  box-shadow: -1px 1px  rgb(0, 0, 0);
+  box-shadow: -1px 1px rgb(0, 0, 0);
 }
 
 .link a {
@@ -48,8 +43,12 @@ body{
   .link {
     flex-direction: column;
   }
-  .hand-gif{displaY: none;}
-  .hand-gif-2{display: none;}
+  .hand-gif {
+    display: none;
+  }
+  .hand-gif-2 {
+    display: none;
+  }
   .welcome-message {
     margin-bottom: 50px !important;
   }
@@ -73,7 +72,7 @@ body{
   text-align: center;
 }
 
-.free-play-text{
+.free-play-text {
   width: 300px;
   height: 50px;
 }
@@ -83,15 +82,15 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom:50px;
+  margin-bottom: 50px;
 }
 
 .play-btn-section p {
   text-align: center;
 }
 
-.hand-gif{
-  transform:rotate(100deg) scaleY(-1) scale(1);;
+.hand-gif {
+  transform: rotate(100deg) scaleY(-1) scale(1);
   height: 200px;
   width: auto;
   margin: 10px;
@@ -102,21 +101,4 @@ body{
   height: 200px;
   width: auto;
   margin: 10px;
-}
-
-.instructions {
-  text-align: center;
-  width: 400px;
-  border: 1px solid black;
-  padding: 20px;
-  border-radius: 15px;
-  background-color: #e33d75;
-  box-shadow: -5px 5px  rgb(0, 0, 0);
-
-}
-
-.instructions p {
-  color: white;
-  font-size: large;
-  
 }

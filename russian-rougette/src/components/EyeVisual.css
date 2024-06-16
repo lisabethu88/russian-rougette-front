@@ -1,60 +1,46 @@
-#eye-visual-box{
-    width:550px;
-    height: 550px;
-    border-radius: 45px;
-    position: relative;
-    margin: 0 20px 0 20px;
-}
-
 .svg-image {
-    position: absolute;
-    top: 0;
-    left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .svg-image#browbone-sparkle {
-    z-index: 2;
+  z-index: 2;
 }
 
 .svg-image#above-crease-sparkle {
-    z-index: 3;
+  z-index: 3;
 }
 
 .svg-image#crease-sparkle {
-    z-index: 4;
+  z-index: 4;
 }
 
 .svg-image#deep-crease-sparkle {
-    z-index: 5;
+  z-index: 5;
 }
 
 .svg-image#inner-lid-sparkle {
-    z-index: 6;
+  z-index: 6;
 }
 
 .svg-image#middle-lid-sparkle {
-    z-index: 7;
+  z-index: 7;
 }
 
 .svg-image#outer-lid-sparkle {
-    z-index: 8;
+  z-index: 8;
 }
 
 .svg-image#inner-corner-sparkle {
-    z-index: 9;
+  z-index: 9;
 }
 
-
-#color-selectors {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+#color-selectors div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+  width: 50px;
+  height: 70px;
 }
-
-#color-selectors section {
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-

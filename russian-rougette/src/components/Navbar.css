@@ -2,14 +2,13 @@
   font-size: 2em;
 }
 
-.about-signup{
+.about-signup {
   font-weight: bold;
 }
 
 .Nav {
   justify-content: center;
   align-items: center;
-  
 }
 
 .navbar-container {
@@ -24,16 +23,15 @@
 }
 
 .rr-logo {
-  width: 100vw;
-  max-width: 800px;
+  width: 100%;
+  max-width: 500px;
 }
 
-.header-links{
-    min-width:fit-content;
-    
+.header-links {
+  min-width: fit-content;
 }
 
-.signed-in{
+.signed-in {
   margin-right: 1rem;
 }
 
@@ -47,11 +45,11 @@
 }
 
 .RR-logo-link {
-  margin:0 auto;
+  margin: 0 auto;
 }
 
 @media (max-width: 600px) {
-  .rr-logo{
+  .rr-logo {
     width: 100vw;
   }
 }

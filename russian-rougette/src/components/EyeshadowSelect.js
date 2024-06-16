@@ -1,14 +1,16 @@
-import { useState, useEffect } from 'react';
-import Button from "react-bootstrap/Button";
+import { useState, useEffect } from "react";
+import { Button } from "@mui/material";
 import { FaCircle } from "react-icons/fa";
 import "./EyeshadowSelect.css";
-import axios from 'axios';
-import { kBaseUrl } from '../Constants';
+import axios from "axios";
+import { buttonStyle, kBaseUrl } from "../Constants";
+import Box from "@mui/material/Box";
+import Loading from "./Loading";
 
-function EyeshadowSelect({  
+function EyeshadowSelect({
   setPalette,
   palette,
-  selectedEyeshadow, 
+  selectedEyeshadow,
   selectedSection,
   browboneColor,
   aboveCreaseColor,
@@ -17,55 +19,50 @@ function EyeshadowSelect({
   outerLidColor,
   middleLidColor,
   innerLidColor,
-  innerCornerColor}) {
-
-    const [formData, setFormData] = useState([]);
+  innerCornerColor,
+}) {
+  const [formData, setFormData] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   // get all eyeshadows from db
-    useEffect(() => {
-      axios
-        .get(`${kBaseUrl}/eyeshadows/${palette.id}`)
-        .then((response) => {
-          setFormData(response.data);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    }, [palette]);
-    
+  useEffect(() => {
+    axios
+      .get(`${kBaseUrl}/eyeshadows/${palette.id}`)
+      .then((response) => {
+        setFormData(response.data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, [palette]);
 
   const handleButtonClick = (eyeshadow) => {
-      selectedEyeshadow(eyeshadow);
+    console.log(eyeshadow);
+    selectedEyeshadow(eyeshadow);
   };
 
   const handleGoBackButtonClick = () => {
     setPalette(null);
-  }
+  };
 
   const getColor = () => {
-    let color="";
+    let color = "";
     if (selectedSection === "Browbone") {
       color = browboneColor;
-    }
-    else if (selectedSection === "Above Crease") {
+    } else if (selectedSection === "Above Crease") {
       color = aboveCreaseColor;
-    }
-    else if (selectedSection === "Crease") {
+    } else if (selectedSection === "Crease") {
       color = creaseColor;
-    }
-    else if (selectedSection === "Deep Crease") {
+    } else if (selectedSection === "Deep Crease") {
       color = deepCreaseColor;
-    }
-    else if (selectedSection === "Outer Lid") {
+    } else if (selectedSection === "Outer Lid") {
       color = outerLidColor;
-    }
-    else if (selectedSection === "Middle Lid") {
+    } else if (selectedSection === "Middle Lid") {
       color = middleLidColor;
-    }
-    else if (selectedSection === "Inner Lid") {
+    } else if (selectedSection === "Inner Lid") {
       color = innerLidColor;
-    }
-    else if (selectedSection === "Inner Corner") {
+    } else if (selectedSection === "Inner Corner") {
       color = innerCornerColor;
     }
     return color;
@@ -73,46 +70,82 @@ function EyeshadowSelect({
 
   const getButton = (eyeshadow) => {
     if (selectedSection) {
-      return (<Button disabled={eyeshadow.color === color} 
-      onClick={() => handleButtonClick(eyeshadow)}>Apply</Button>);
+      return (
+        <Button
+          sx={buttonStyle}
+          disabled={eyeshadow.color === color}
+          onClick={() => handleButtonClick(eyeshadow)}
+        >
+          Apply
+        </Button>
+      );
     }
-  }
+  };
   const color = getColor();
-  
+
   return (
-    <section>
-      <label class="palette-label header">
+    <Box
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        flexDirection: "column",
+        width: "100%",
+        alignItems: "center",
+        maxWidth: 450,
+        height: 600,
+        borderRadius: 3,
+      }}
+    >
       <h2>{palette.name}</h2>
-      </label>
-    <section class="eyeshadow-select-box box-container">
-      <table>
-      <thead>
-        <tr>
-        <th class="btn-col"><Button class="go-back-btn" onClick={()=>{handleGoBackButtonClick()}}>Go Back</Button></th>
-          <th class="name-td">Shade</th>
-          <th class="color-td">Color</th>
-          <th class="finish-td">Finish</th>
-        </tr><hr/>
-      </thead>
 
-      <tbody>
-        {formData.map((eyeshadow) => (
-          <tr>
-
-            <td class="btn-col">{getButton(eyeshadow)}</td>
-            <td class="name-td">{eyeshadow.name}</td>
-            <td class="color-td"><FaCircle color={eyeshadow.color} class="icon"/></td>
-            <td class="finish-td">{eyeshadow.finish}</td>
-            
-          </tr>
-        ))}
-      </tbody>
-      </table>
-      </section>
-      </section>
-
+      <Box
+        sx={{
+          height: 500,
+          overflow: "scroll",
+          backgroundColor: "#fa9b856e",
+          padding: "20px",
+          borderRadius: 3,
+        }}
+      >
+        {loading ? (
+          <Loading />
+        ) : (
+          <table>
+            <thead>
+              <tr>
+                <th class="btn-col">
+                  <Button
+                    sx={buttonStyle}
+                    onClick={() => {
+                      handleGoBackButtonClick();
+                    }}
+                  >
+                    Go Back
+                  </Button>
+                </th>
+                <th class="name-td">Shade</th>
+                <th class="color-td">Color</th>
+                <th class="finish-td">Finish</th>
+              </tr>
+              <hr id="table-header-hr" />
+            </thead>
+            <tbody>
+              {formData.map((eyeshadow) => (
+                <tr>
+                  <td class="btn-col">{getButton(eyeshadow)}</td>
+                  <td class="name-td">{eyeshadow.name}</td>
+                  <td class="color-td">
+                    <FaCircle color={eyeshadow.color} class="icon" />
+                  </td>
+                  <td class="finish-td">{eyeshadow.finish}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        )}
+      </Box>
+    </Box>
   );
-};
-
+}
 
 export default EyeshadowSelect;
