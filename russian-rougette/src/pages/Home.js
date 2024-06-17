@@ -17,8 +17,8 @@ const Home = () => {
         backgroundPosition: "center",
         backgroundSize: "cover",
         width: "100%",
-        height: "100%",
-        overflow: "scroll",
+        // height: "100%",
+        // overflow: "scroll",
       }}
     >
       <Box

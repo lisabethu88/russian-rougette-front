@@ -9,7 +9,7 @@ const Instructions = ({ text }) => {
       sx={{
         width: "100%",
         maxWidth: 500,
-        margin: 2,
+        padding: 2,
         fontFamily: bodyFont,
       }}
     >

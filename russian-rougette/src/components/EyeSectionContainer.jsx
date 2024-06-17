@@ -16,26 +16,30 @@ const EyeSectionContainer = ({
   innerCornerEyeshadow,
 }) => {
   return (
-    <Box>
-      <Box
-        sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
-      >
-        <SectionSelect
-          handleSelectedSection={handleSelectedSection}
-          selectedSection={selectedSection}
-        />
-        <EyeVisual
-          selectedSection={selectedSection}
-          browboneEyeshadow={browboneEyeshadow}
-          aboveCreaseEyeshadow={aboveCreaseEyeshadow}
-          creaseEyeshadow={creaseEyeshadow}
-          deepCreaseEyeshadow={deepCreaseEyeshadow}
-          outerLidEyeshadow={outerLidEyeshadow}
-          middleLidEyeshadow={middleLidEyeshadow}
-          innerLidEyeshadow={innerLidEyeshadow}
-          innerCornerEyeshadow={innerCornerEyeshadow}
-        />
-      </Box>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: { xs: "column-reverse", sm: "row" },
+        alignItems: "center",
+        justifyContent: "center",
+        flexWrap: { xs: "wrap", sm: "nowrap" },
+      }}
+    >
+      <SectionSelect
+        handleSelectedSection={handleSelectedSection}
+        selectedSection={selectedSection}
+      />
+      <EyeVisual
+        selectedSection={selectedSection}
+        browboneEyeshadow={browboneEyeshadow}
+        aboveCreaseEyeshadow={aboveCreaseEyeshadow}
+        creaseEyeshadow={creaseEyeshadow}
+        deepCreaseEyeshadow={deepCreaseEyeshadow}
+        outerLidEyeshadow={outerLidEyeshadow}
+        middleLidEyeshadow={middleLidEyeshadow}
+        innerLidEyeshadow={innerLidEyeshadow}
+        innerCornerEyeshadow={innerCornerEyeshadow}
+      />
     </Box>
   );
 };

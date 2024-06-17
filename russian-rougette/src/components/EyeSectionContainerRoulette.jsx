@@ -4,7 +4,6 @@ import PaletteSelect from "./PaletteSelect";
 import EyeVisualRoulette from "./EyeVisualRoulette";
 
 const EyeSectionContainerRoulette = ({ handleSelectedPalette, eyeshadows }) => {
-  console.log("eyesectioncontinrroulette", eyeshadows);
   return (
     <Box
       sx={{
