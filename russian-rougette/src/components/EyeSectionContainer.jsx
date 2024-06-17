@@ -19,7 +19,7 @@ const EyeSectionContainer = ({
     <Box
       sx={{
         display: "flex",
-        flexDirection: { xs: "column-reverse", sm: "row" },
+        flexDirection: { xs: "column", sm: "row" },
         alignItems: "center",
         justifyContent: "center",
         flexWrap: { xs: "wrap", sm: "nowrap" },

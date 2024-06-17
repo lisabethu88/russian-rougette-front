@@ -11,6 +11,8 @@ const Instructions = ({ text }) => {
         maxWidth: 500,
         padding: 2,
         fontFamily: bodyFont,
+        backgroundColor: "#f7f7f7",
+        borderRadius: 2,
       }}
     >
       <Typography>

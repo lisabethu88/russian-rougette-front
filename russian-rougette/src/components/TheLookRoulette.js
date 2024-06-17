@@ -3,6 +3,7 @@ import { Box } from "@mui/material";
 import { List } from "@mui/material";
 import { ListItemText } from "@mui/material";
 import { Typography } from "@mui/material";
+import { ListItem } from "@mui/material";
 
 const TheLookRoulette = ({ eyeshadows, selectedPalette }) => {
   const browboneShade = eyeshadows["Browbone"];
@@ -13,67 +14,88 @@ const TheLookRoulette = ({ eyeshadows, selectedPalette }) => {
   const innerLidShade = eyeshadows["Inner Lid"];
   const outerLidShade = eyeshadows["Outer Lid"];
   const middleLidShade = eyeshadows["Middle Lid"];
+
   const toggleText = (shade) => {
     if (shade.name) {
       return (
         <List
+          className="box-shadow"
           sx={{
             padding: 1,
             display: "flex",
-            flexWrap: "wrap",
             gap: 1,
           }}
         >
-          <ListItemText
-            primary={"Shade"}
-            secondary={shade.name}
+          <ListItem
             sx={{
-              backgroundColor: "#f2c5ba",
+              backgroundColor: "#f4a0a02e",
               borderRadius: 2,
               padding: 1,
-              width: "min-content",
-            }}
-            primaryTypographyProps={{
-              color: "#544131",
-              fontWeight: "bold",
               width: "fit-content",
+              gap: 1,
             }}
-            secondaryTypographyProps={{
-              color: "#6e5555",
-              width: "fit-content",
-            }}
-          />
-          <hr />
-          <ListItemText
-            primary={"Palette/Brand"}
-            secondary={`${selectedPalette.name} - ${shade.brand}`}
+          >
+            <ListItemText
+              primary={"Shade"}
+              secondary={shade.name}
+              primaryTypographyProps={{
+                color: "#544131",
+                fontWeight: "bold",
+                width: "fit-content",
+              }}
+              secondaryTypographyProps={{
+                color: "#6e5555",
+                width: "fit-content",
+              }}
+            />
+            <div
+              style={{
+                backgroundColor: shade.color,
+                outline: "1px solid black",
+                borderRadius: "50%",
+                padding: 0,
+                width: 20,
+                height: 20,
+              }}
+            ></div>
+          </ListItem>
+          <ListItem
             sx={{
-              backgroundColor: "#f2c5ba",
+              backgroundColor: "#f4a0a02e",
               borderRadius: 2,
               padding: 1,
-              width: "min-content",
-            }}
-            primaryTypographyProps={{
-              color: "#544131",
-              fontWeight: "bold",
               width: "fit-content",
             }}
-            secondaryTypographyProps={{
-              color: "#6e5555",
-              width: "fit-content",
-            }}
-          />
+          >
+            <ListItemText
+              primary={"Palette/Brand"}
+              secondary={`${selectedPalette.name} - ${shade.brand}`}
+              primaryTypographyProps={{
+                color: "#544131",
+                fontWeight: "bold",
+                width: "fit-content",
+              }}
+              secondaryTypographyProps={{
+                color: "#6e5555",
+                width: "fit-content",
+              }}
+            />
+          </ListItem>
         </List>
       );
     } else {
       return (
-        <Typography textAlign={"center"} padding={1}>
+        <Typography
+          sx={{
+            margin: "5px auto",
+            textAlign: "center",
+          }}
+        >
           --
         </Typography>
       );
     }
   };
-
   return (
     <Box
       sx={{

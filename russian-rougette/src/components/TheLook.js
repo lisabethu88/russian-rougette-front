@@ -2,6 +2,8 @@ import "./TheLook.css";
 import { Box, List } from "@mui/material";
 import { Typography } from "@mui/material";
 import { ListItemText } from "@mui/material";
+import { ListItem } from "@mui/material";
+import CircleIcon from "@mui/icons-material/Circle";
 
 const TheLook = ({
   browboneShade,
@@ -21,49 +23,64 @@ const TheLook = ({
           sx={{
             padding: 1,
             display: "flex",
-            flexWrap: "wrap",
             gap: 1,
           }}
         >
-          <ListItemText
-            primary={"Shade"}
-            secondary={shade.name}
+          <ListItem
             sx={{
-              backgroundColor: "#f2c5ba",
+              backgroundColor: "#f4a0a02e",
               borderRadius: 2,
               padding: 1,
-              width: "min-content",
-            }}
-            primaryTypographyProps={{
-              color: "#544131",
-              fontWeight: "bold",
               width: "fit-content",
+              gap: 1,
             }}
-            secondaryTypographyProps={{
-              color: "#6e5555",
-              width: "fit-content",
-            }}
-          />
-          <hr />
-          <ListItemText
-            primary={"Palette/Brand"}
-            secondary={`${shade.palette_name} - ${shade.brand}`}
+          >
+            <ListItemText
+              primary={"Shade"}
+              secondary={shade.name}
+              primaryTypographyProps={{
+                color: "#544131",
+                fontWeight: "bold",
+                width: "fit-content",
+              }}
+              secondaryTypographyProps={{
+                color: "#6e5555",
+                width: "fit-content",
+              }}
+            />
+            <div
+              style={{
+                backgroundColor: shade.color,
+                outline: "1px solid black",
+                borderRadius: "50%",
+                padding: 0,
+                width: 20,
+                height: 20,
+              }}
+            ></div>
+          </ListItem>
+          <ListItem
             sx={{
-              backgroundColor: "#f2c5ba",
+              backgroundColor: "#f4a0a02e",
               borderRadius: 2,
               padding: 1,
-              width: "min-content",
-            }}
-            primaryTypographyProps={{
-              color: "#544131",
-              fontWeight: "bold",
               width: "fit-content",
             }}
-            secondaryTypographyProps={{
-              color: "#6e5555",
-              width: "fit-content",
-            }}
-          />
+          >
+            <ListItemText
+              primary={"Palette/Brand"}
+              secondary={`${shade.palette_name} - ${shade.brand}`}
+              primaryTypographyProps={{
+                color: "#544131",
+                fontWeight: "bold",
+                width: "fit-content",
+              }}
+              secondaryTypographyProps={{
+                color: "#6e5555",
+                width: "fit-content",
+              }}
+            />
+          </ListItem>
         </List>
       );
     } else {

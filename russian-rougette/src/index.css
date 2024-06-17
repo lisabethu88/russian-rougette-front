@@ -65,11 +65,12 @@ h5 {
   font-size: 0.9rem !important;
   text-align: center;
   letter-spacing: 1;
-  background-color: #df848739;
+  background-color: #df8487;
   padding: 10px;
   margin-bottom: 0 !important;
   width: 100%;
   font-weight: bold !important;
+  color: white !important;
   /* outline: 1px solid #fa9a858f; */
 }
 

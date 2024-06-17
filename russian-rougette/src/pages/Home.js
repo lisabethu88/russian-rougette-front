@@ -4,9 +4,7 @@ import { Button, Box, ListItem } from "@mui/material";
 import { Link } from "react-router-dom";
 import { Typography, List, ListItemText } from "@mui/material";
 import { bodyFont, buttonStyle, headerFont } from "../Constants";
-import background from "../images/Untitled design (6).png";
-import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import background from "../images/hero-img.png";
 
 const Home = () => {
   return (
