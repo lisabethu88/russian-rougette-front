@@ -4,7 +4,7 @@ import { Button, Box, ListItem } from "@mui/material";
 import { Link } from "react-router-dom";
 import { Typography, List, ListItemText } from "@mui/material";
 import { bodyFont, buttonStyle, headerFont } from "../Constants";
-import background from "../images/hero-img.png";
+import background from "../images/hero-img copy (1) (1).png";
 
 const Home = () => {
   return (
