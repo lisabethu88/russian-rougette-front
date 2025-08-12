@@ -116,6 +116,7 @@ const FreePlay = () => {
         width: "100%",
         height: "fit-content",
         paddingBottom: 5,
+        paddingTop: 5,
         overflow: "scroll",
         gap: 5,
       }}

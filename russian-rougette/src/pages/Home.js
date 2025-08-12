@@ -15,6 +15,7 @@ const Home = () => {
         backgroundPosition: "center",
         backgroundSize: "cover",
         width: "100%",
+        flexGrow: 1,
         // height: "100%",
         // overflow: "scroll",
       }}
