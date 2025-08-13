@@ -1,15 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap");
+html {
+  /* min-height: 100vh;
+  height: fit-content; */
+}
 
 body {
-  margin: 0;
+  /* margin: 0;
   font-family: "Roboto Flex", -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
     "Helvetica Neue", sans-serif !important;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale; */
   background-color: #fcfbfb !important;
-  width: 100vw;
-  height: 100vh;
+  /* width: 100%;
+  height: 100%; */
   overflow-x: hidden;
   color: #544131 !important;
 }
@@ -32,10 +36,10 @@ h2 {
   align-items: center;
 }
 
-#root {
+/* #root {
   width: 100%;
   height: 100%;
-}
+} */
 
 input[type="color" i] {
   border-radius: 50%;
@@ -96,4 +100,37 @@ b {
 #table-header-hr {
   opacity: 0.5;
   margin-top: 0;
+}
+
+main {
+  flex-grow: 1;
+  justify-content: flex-start;
+}
+
+html,
+body {
+  height: 100%; /* ensures 100vh reference works correctly */
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+header {
+  /* Optional: fixed height or auto based on content */
+}
+
+main {
+  flex: 1; /* This makes main grow to fill the space */
+}
+
+footer {
+  /* Optional: fixed height or auto based on content */
 }

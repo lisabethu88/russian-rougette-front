@@ -165,9 +165,8 @@ const RandomPlay = () => {
         alignItems: "center",
         width: "100%",
         height: "fit-content",
-        minHeight: "100%",
         paddingBottom: 5,
-        overflow: "scroll",
+        paddingTop: 5,
         gap: 5,
       }}
     >

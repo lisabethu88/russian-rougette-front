@@ -10,13 +10,3 @@
     transform: rotate(360deg);
   }
 }
-
-#root {
-  display: flex;
-  flex-direction: column;
-}
-
-main {
-  flex-grow: 1;
-  justify-content: flex-start;
-}
